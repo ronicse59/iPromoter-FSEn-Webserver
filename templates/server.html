@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <div class="jumbotron text-center" style="color:#FF1493;">
+        <h1><img src="../static/fabicon.png" alt="Home" height="50" width="40">&nbsp;&nbsp;iPromoter-FSEn</h1>
+        <p class="lead"><b>Identification of Bacterial <var>σ</var><sup>70</sup> Promoter Sequences Using Feature Subspace Based Ensemble Classifier
+        </b></p>
+    </div>
+    <div class="jumbotron text-center">
+        <form action="" method="post">
+            {{ form.csrf }}
+            {{ form.name.label }}<textarea id="txtFasta" name="name" placeholder="Paste your query sequences here...." required></textarea><br/><br/>
+            <input type="submit" value="Submit"/>
+            <button type="button" name="btnExample" onclick="promoterExample()">Example</button>
+            <input type="reset" value="Reset" onclick="resetBox()">
+         </form>
+
+    </div>
+    <script>
+    function promoterExample() {
+      document.getElementById("txtFasta").innerHTML = ">Example-1: The segment of &sigma;70 promoter of E.coli\nAGCCAGGCGAGATATGATCTATATCAATTTCTCATCTATAATGCTTTGTTAGTATCTCGTCGCCGACTTAATAAAGAGAGA\n>Example-2: The segment of &sigma;70 promoter of E.coli\nCGGGCCTATAAGCCAGGCGAGATATGATCTATATCAATTTCTCATCTATAATGCTTTGTTAGTATCTCGTCGCCGACTTAA\n>Example-3: The segment of none promoter of E.coli\nGCGAGAACGTGTATCGTTTTCGCCGGATAAGCTCGATCAGGCGCTTGACAGCCTGCTTGCGCAGCCGATGGTGCAGGGCGG\n>Example-4: The segment of none promoter of E.coli\nCGAAAGCCCGCGGCGTGATGCTGAAATCCTGCTGGAGCATGTTACCGGCAGAGGGCGTACTTTTATTCTCGCCTTTGGTGA";
+
+    }
+
+    function resetBox() {
+        document.getElementById("txtFasta").innerHTML = "";
+    }
+    </script>
+{% endblock %}

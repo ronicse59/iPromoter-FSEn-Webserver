@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <div class="jumbotron text-center" style="color:#FF1493;">
+        <h1><img src="../static/fabicon.png" alt="Home" height="50" width="40">&nbsp;&nbsp;iPromoter-FSEn</h1>
+        <p class="lead"><b>Identification of Bacterial <var>σ</var><sup>70</sup> Promoter Sequences Using Feature Subspace Based Ensemble Classifier
+        </b></p>
+    </div>
+    <div class="jumbotron text-justify" style="font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;">
+        <h3 style="text-align: center;">Abstract</h3>
+
+    <p>Sigma promoter sequences in bacterial genomes are important due to their role in transcription
+initiation. Sigma 70 is one of the most important and crucial sigma factors. In this paper,
+we address the problem of identification of <var>σ</var><sup>70</sup> promoter sequences in bacterial genome. We
+propose iPromoter-FSEn, a novel predictor for identification of <var>σ</var><sup>70</sup> promoter sequences. Our
+proposed method is based on a feature subspace based ensemble classifier. A large set of of features
+extracted from the sequence of nucleotides are divided into subsets and each subset is given to
+individual single classifiers to learn. Based on the decisions of the ensemble an aggregate decision
+is made by the ensemble voting classifier. We tested our method on a standard benchmark dataset
+extracted from experimentally validated results. Experimental results shows that iPromoter-FSEn
+significantly improves over the state-of-the art <var>σ</var><sup>70</sup> promoter sequence predictors. The accuracy
+and area under receiver operating characteristic curve of iPromoter-FSEn are 86.32% and 0.9319
+respectively. We have also made our method readily available for use as an web application from:
+http://ipromoterfsen.pythonanywhere.com/server.</p>
+    </div>
+<h6 style="text-align:center;"><font color="red">Please click <a href="/readme" target="_blank">Read Me</a> first for the instruction.</font></h6>
+{% endblock %}

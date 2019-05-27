@@ -1,0 +1,48 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <h1>Benchmark Dataset</h1>
+<p>Please find benchmark dataset from the link below</p>
+<p>You will find total 2141 of DNA segments.
+    Among them 741 were σ<sup>70</sup> promoters sequence of E. coli K-12.
+    Rest of them were randomly chosen non-promoter sequences which was
+    extracted from coding regions and intergenic regions of E.coli K-12
+    genome. All of them were 81 bp where 60 bp upstream and 20 bp
+    downstream of the TSS (Transcript Start Site) at each sequence
+    in the dataset [1, 2].</p>
+    <a href="static/BenchmarkData.txt" download="BenchmarkData.txt">Click Here</a>
+<br/><br/><br/>
+<h1>References</h1>
+
+
+<table border="0" style="width:100%;" class="table">
+        <col width="3%">
+        <col width="5%">
+        <col width="92%">
+    <tr>
+        <td>[1]</td>
+        <td></td>
+        <td><p>Hao Lin, Zhi-Yong Liang, Hua Tang, and Wei Chen. Identifying sigma70 promoters with novel pseudo
+            nucleotide composition. <i>IEEE/ACM transactions on computational biology and bioinformatics, 2017.</i></p>
+        </td>
+
+    </tr>
+    <tr>
+        <td>[2]</td>
+        <td></td>
+        <td><p>Socorro Gama-Castro, Heladia Salgado, Alberto Santos-Zavaleta, Daniela Ledezma-Tejeida, Luis
+Muñiz-Rascado, Jair Santiago Garcı́a-Sotelo, Kevin Alquicira-Hernández, Irma Martı́nez-Flores, Lu-
+cia Pannier, Jaime Abraham Castro-Mondragón, et al. RegulonDB version 9.0: high-level integration
+of gene regulation, coexpression, motif clustering and beyond.<i> Nucleic acids research, 44(D1):D133–
+                D143, 2015.</i></p>
+        </td>
+
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+
+    </tr>
+</table>
+{% endblock %}

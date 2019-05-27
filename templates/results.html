@@ -1,0 +1,56 @@
+{% extends 'layout.html' %}
+    <script>
+        var sequences = {{ sequences }}
+        var order = {{ order }}
+        var pred = {{ y_pred }}
+        var proba = {{ y_proba }}
+        var error_ord = {{ error_ord }}
+        var error_seq = {{ error_seq }}
+    </script>
+{% block body %}
+    <h1>Results</h1>
+    {% if error_ord[0] %}
+        <hr>
+        {% if order[0] %}
+            <h6><font color="red">* Invalid inputs are showing at the end. Input should be FASTA format. Visit <a href='/readme'><b> Read Me </b></a>or
+            click “Example” button for correct format.</font></h6>
+        {% else %}
+            <h6><font color="red">* Input should be FASTA format. Visit <a href='/readme'><b> Read Me </b></a>or
+            click “Example” button for correct format.</font></h6>
+        {% endif %}
+        {% if (order|length)==1 %}
+            <h4>Correct Input Result</h4>
+        {% elif (order|length)>1 %}
+            <h4>Correct Inputs Result</h4>
+        {% endif %}
+    {% endif %}
+    {% if order[0] %}
+        {% for i in range(order|length) %}
+            <li class="list-group-item">{{ order[i] }}<br/>{{sequences[order[i]] }}<br/>
+                {% if y_pred[i] %}
+                <b><label><font color="green">&sigma;<sup>70</sup> Promoter </font>with it's probablity score: <font color="green">{{ '%0.4f'| format(y_proba[i]|float) }}</font></label></b>
+                {% else %}
+                <b><label><font color="red">&sigma;<sup>70</sup> Non-promoter </font>with it's probability score: <font color="red">{{ '%0.4f'| format(y_proba[i]|float) }}</font></label></b>
+                {% endif %}
+                <br/>
+            </li>
+        {% endfor %}
+    {% endif %}
+
+    {% if error_ord[0] %}
+        {% if (error_ord|length)==1 %}
+            <h4>Invalid Input</h4>
+        {% else %}
+            <h4>Invalid Inputs</h4>
+        {% endif %}
+        {% for i in range(error_ord|length) %}
+            <li class="list-group-item">
+                <b><font color="red">{{ error_ord[i] }}<br/>{{ error_seq[error_ord[i]] }}</font></b>
+            </li>
+        {% endfor %}
+        <br/>
+    {% endif %}
+
+{% endblock %}
+
+
