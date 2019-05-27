@@ -1,0 +1,85 @@
+.jumbotron {
+    padding: 0rem 0rem;
+}
+
+.bg-dark {
+    background-color: #1D66BC !important;
+}
+
+.navbar {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0rem 6.5rem;
+}
+
+.jumbotron {
+    padding: 1rem 1rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    background-color: #e9ecef;
+    border-radius: .5rem;
+}
+
+textarea {
+    width: 90%;
+    height: 275px;
+    border-radius: .5rem;
+    resize: none;
+    padding: 3%;
+    overflow:scroll;
+}
+
+button{
+    width: 10%;
+    height: 30px;
+    background-color: #1D66BC !important;
+    border-radius: 25px;
+    margin: 5px;
+    color: #ffffff;
+}
+input{
+    width: 10%;
+    height: 30px;
+    background-color: #1D66BC !important;
+    border-radius: 25px;
+    margin: 5px;
+    color: #ffffff;
+}
+
+h1, he, h3, h4, h5, h6{
+    color: #1D66BC !important;
+    margin-top: 20px;
+}
+tr:nth-child() {
+    background-color: #f2f2f2;
+}
+
+p-name{
+    color: #1D66BC !important;
+    font-size: 25px;
+    font-family: Garamond;
+}
+p-info{
+    font-size: 16px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.p-image{
+    width:160px;
+    height:170px;
+    border-radius: 10%;
+}
+.navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show > .nav-link {
+    color: #ffffff;
+    margin-left: 10px;
+}
+p,a{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+}
